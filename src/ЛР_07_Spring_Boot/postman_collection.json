@@ -1,0 +1,106 @@
+{
+  "info": {
+    "name": "spring-boot-lab1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/hello",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/hello"
+      }
+    },
+    {
+      "name": "/hello?name=Petya",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/hello?name=Petya"
+      }
+    },
+    {
+      "name": "/show-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-array"
+      }
+    },
+    {
+      "name": "/show-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-map"
+      }
+    },
+    {
+      "name": "/show-all-lenght",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-all-lenght"
+      }
+    },
+    {
+      "name": "/update-array?s=Java",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array?s=Java"
+      }
+    },
+    {
+      "name": "/update-array?s=Spring",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array?s=Spring"
+      }
+    },
+    {
+      "name": "/show-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-array"
+      }
+    },
+    {
+      "name": "/update-map?s=Java",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map?s=Java"
+      }
+    },
+    {
+      "name": "/update-map?s=Spring",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map?s=Spring"
+      }
+    },
+    {
+      "name": "/show-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-map"
+      }
+    },
+    {
+      "name": "/show-all-lenght",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/show-all-lenght"
+      }
+    },
+    {
+      "name": "/update-array",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-array"
+      }
+    },
+    {
+      "name": "/update-map",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/update-map"
+      }
+    }
+  ]
+}

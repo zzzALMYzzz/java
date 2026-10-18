@@ -1,0 +1,41 @@
+### 1 /hello
+GET http://localhost:8080/hello
+
+### 2 /hello?name=Petya
+GET http://localhost:8080/hello?name=Petya
+
+### 3 /show-array
+GET http://localhost:8080/show-array
+
+### 4 /show-map
+GET http://localhost:8080/show-map
+
+### 5 /show-all-lenght
+GET http://localhost:8080/show-all-lenght
+
+### 6 /update-array?s=Java
+GET http://localhost:8080/update-array?s=Java
+
+### 7 /update-array?s=Spring
+GET http://localhost:8080/update-array?s=Spring
+
+### 8 /show-array
+GET http://localhost:8080/show-array
+
+### 9 /update-map?s=Java
+GET http://localhost:8080/update-map?s=Java
+
+### 10 /update-map?s=Spring
+GET http://localhost:8080/update-map?s=Spring
+
+### 11 /show-map
+GET http://localhost:8080/show-map
+
+### 12 /show-all-lenght
+GET http://localhost:8080/show-all-lenght
+
+### 13 /update-array
+GET http://localhost:8080/update-array
+
+### 14 /update-map
+GET http://localhost:8080/update-map

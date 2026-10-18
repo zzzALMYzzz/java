@@ -1,0 +1,430 @@
+{
+  "info": {
+    "name": "ФИО студента — Spring Boot ЛР 1–8",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8082"
+    },
+    {
+      "key": "email",
+      "value": ""
+    },
+    {
+      "key": "password",
+      "value": ""
+    },
+    {
+      "key": "studentId",
+      "value": "1"
+    },
+    {
+      "key": "disciplineId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "ЛР 1 — Hello",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/hello?name=Artem"
+      }
+    },
+    {
+      "name": "ЛР 1 — Array add",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/update-array?s=Java"
+      }
+    },
+    {
+      "name": "ЛР 1 — Array list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/show-array"
+      }
+    },
+    {
+      "name": "ЛР 1 — Map add",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/update-map?s=Spring"
+      }
+    },
+    {
+      "name": "ЛР 1 — Map list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/show-map"
+      }
+    },
+    {
+      "name": "ЛР 1 — Sizes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/show-all-lenght"
+      }
+    },
+    {
+      "name": "ЛР 2–5 — feedback",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/feedback",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uid\": \"lab-8\",\n  \"operationUid\": \"original-operation\",\n  \"systemName\": \"CRM\",\n  \"systemTime\": \"2026-10-16T13:00:00Z\",\n  \"source\": \"Postman\",\n  \"communicationId\": 100,\n  \"position\": \"TL\",\n  \"salary\": 10000,\n  \"bonus\": 1,\n  \"workDays\": 90,\n  \"calculationYear\": 2024,\n  \"quarter\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "ЛР 2 — validation failure",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/feedback",
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "ЛР 2 — unsupported uid",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/feedback",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uid\": \"123\",\n  \"operationUid\": \"original-operation\",\n  \"systemName\": \"CRM\",\n  \"systemTime\": \"2026-10-16T13:00:00Z\",\n  \"source\": \"Postman\",\n  \"communicationId\": 100,\n  \"position\": \"TL\",\n  \"salary\": 10000,\n  \"bonus\": 1,\n  \"workDays\": 90,\n  \"calculationYear\": 2024,\n  \"quarter\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — students list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/students",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — students create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/students",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Артем\",\n  \"surname\": \"Петров\",\n  \"faculty\": \"РТФ\",\n  \"age\": 20\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — students get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/students/{{studentId}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — students update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/students/{{studentId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Артем\",\n  \"surname\": \"Петров\",\n  \"faculty\": \"РТФ\",\n  \"age\": 20\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — students delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/students/{{studentId}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — disciplines list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/disciplines",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — disciplines create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/disciplines",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Java\",\n  \"hours\": 72\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — disciplines get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/disciplines/{{disciplineId}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — disciplines update",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/disciplines/{{disciplineId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Java\",\n  \"hours\": 72\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ЛР 6 — disciplines delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/disciplines/{{disciplineId}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{email}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

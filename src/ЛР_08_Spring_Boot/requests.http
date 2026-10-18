@@ -1,0 +1,135 @@
+@baseUrl = http://localhost:8082
+@email = your-email
+@password = your-password
+@studentId = 1
+@disciplineId = 1
+
+### ЛР 1 — Hello
+GET {{baseUrl}}/hello?name=Artem
+
+### ЛР 1 — Array add
+GET {{baseUrl}}/update-array?s=Java
+
+### ЛР 1 — Array list
+GET {{baseUrl}}/show-array
+
+### ЛР 1 — Map add
+GET {{baseUrl}}/update-map?s=Spring
+
+### ЛР 1 — Map list
+GET {{baseUrl}}/show-map
+
+### ЛР 1 — Sizes
+GET {{baseUrl}}/show-all-lenght
+
+### ЛР 2–5 — feedback
+POST {{baseUrl}}/feedback
+Content-Type: application/json
+
+{
+  "uid": "lab-8",
+  "operationUid": "original-operation",
+  "systemName": "CRM",
+  "systemTime": "2026-10-16T13:00:00Z",
+  "source": "Postman",
+  "communicationId": 100,
+  "position": "TL",
+  "salary": 10000,
+  "bonus": 1,
+  "workDays": 90,
+  "calculationYear": 2024,
+  "quarter": 1
+}
+
+### ЛР 2 — validation failure
+POST {{baseUrl}}/feedback
+Content-Type: application/json
+
+{}
+
+### ЛР 2 — unsupported uid
+POST {{baseUrl}}/feedback
+Content-Type: application/json
+
+{
+  "uid": "123",
+  "operationUid": "original-operation",
+  "systemName": "CRM",
+  "systemTime": "2026-10-16T13:00:00Z",
+  "source": "Postman",
+  "communicationId": 100,
+  "position": "TL",
+  "salary": 10000,
+  "bonus": 1,
+  "workDays": 90,
+  "calculationYear": 2024,
+  "quarter": 1
+}
+
+### ЛР 6 — students list
+GET {{baseUrl}}/api/students
+Authorization: Basic {{email}} {{password}}
+
+### ЛР 6 — students create
+POST {{baseUrl}}/api/students
+Authorization: Basic {{email}} {{password}}
+Content-Type: application/json
+
+{
+  "name": "Артем",
+  "surname": "Петров",
+  "faculty": "РТФ",
+  "age": 20
+}
+
+### ЛР 6 — students get
+GET {{baseUrl}}/api/students/{{studentId}}
+Authorization: Basic {{email}} {{password}}
+
+### ЛР 6 — students update
+PUT {{baseUrl}}/api/students/{{studentId}}
+Authorization: Basic {{email}} {{password}}
+Content-Type: application/json
+
+{
+  "name": "Артем",
+  "surname": "Петров",
+  "faculty": "РТФ",
+  "age": 20
+}
+
+### ЛР 6 — students delete
+DELETE {{baseUrl}}/api/students/{{studentId}}
+Authorization: Basic {{email}} {{password}}
+
+### ЛР 6 — disciplines list
+GET {{baseUrl}}/api/disciplines
+Authorization: Basic {{email}} {{password}}
+
+### ЛР 6 — disciplines create
+POST {{baseUrl}}/api/disciplines
+Authorization: Basic {{email}} {{password}}
+Content-Type: application/json
+
+{
+  "name": "Java",
+  "hours": 72
+}
+
+### ЛР 6 — disciplines get
+GET {{baseUrl}}/api/disciplines/{{disciplineId}}
+Authorization: Basic {{email}} {{password}}
+
+### ЛР 6 — disciplines update
+PUT {{baseUrl}}/api/disciplines/{{disciplineId}}
+Authorization: Basic {{email}} {{password}}
+Content-Type: application/json
+
+{
+  "name": "Java",
+  "hours": 72
+}
+
+### ЛР 6 — disciplines delete
+DELETE {{baseUrl}}/api/disciplines/{{disciplineId}}
+Authorization: Basic {{email}} {{password}}

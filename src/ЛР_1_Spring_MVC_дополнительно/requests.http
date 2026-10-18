@@ -1,0 +1,41 @@
+### 1 /hello
+GET http://localhost:8080/spring-mvc-lab/hello
+
+### 2 /hello?name=Student
+GET http://localhost:8080/spring-mvc-lab/hello?name=Student
+
+### 3 /hello?name=Николай
+GET http://localhost:8080/spring-mvc-lab/hello?name=Николай
+
+### 4 /about
+GET http://localhost:8080/spring-mvc-lab/about
+
+### 5 /time
+GET http://localhost:8080/spring-mvc-lab/time
+
+### 6 /square?value=5
+GET http://localhost:8080/spring-mvc-lab/square?value=5
+
+### 7 /square
+GET http://localhost:8080/spring-mvc-lab/square
+
+### 8 /length?text=Spring
+GET http://localhost:8080/spring-mvc-lab/length?text=Spring
+
+### 9 /length
+GET http://localhost:8080/spring-mvc-lab/length
+
+### 10 /uppercase?text=Spring
+GET http://localhost:8080/spring-mvc-lab/uppercase?text=Spring
+
+### 11 /uppercase
+GET http://localhost:8080/spring-mvc-lab/uppercase
+
+### 12 /repeat?text=Hi&count=3
+GET http://localhost:8080/spring-mvc-lab/repeat?text=Hi&count=3
+
+### 13 /repeat?text=Hi
+GET http://localhost:8080/spring-mvc-lab/repeat?text=Hi
+
+### 14 /unknown
+GET http://localhost:8080/spring-mvc-lab/unknown

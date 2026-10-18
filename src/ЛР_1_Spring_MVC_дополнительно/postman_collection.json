@@ -1,0 +1,106 @@
+{
+  "info": {
+    "name": "spring-mvc-lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/hello",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/hello"
+      }
+    },
+    {
+      "name": "/hello?name=Student",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/hello?name=Student"
+      }
+    },
+    {
+      "name": "/hello?name=Николай",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/hello?name=Николай"
+      }
+    },
+    {
+      "name": "/about",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/about"
+      }
+    },
+    {
+      "name": "/time",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/time"
+      }
+    },
+    {
+      "name": "/square?value=5",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/square?value=5"
+      }
+    },
+    {
+      "name": "/square",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/square"
+      }
+    },
+    {
+      "name": "/length?text=Spring",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/length?text=Spring"
+      }
+    },
+    {
+      "name": "/length",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/length"
+      }
+    },
+    {
+      "name": "/uppercase?text=Spring",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/uppercase?text=Spring"
+      }
+    },
+    {
+      "name": "/uppercase",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/uppercase"
+      }
+    },
+    {
+      "name": "/repeat?text=Hi&count=3",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/repeat?text=Hi&count=3"
+      }
+    },
+    {
+      "name": "/repeat?text=Hi",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/repeat?text=Hi"
+      }
+    },
+    {
+      "name": "/unknown",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/spring-mvc-lab/unknown"
+      }
+    }
+  ]
+}
